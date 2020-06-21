@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package bcdice_irc_proto;
+
+service BCDiceIRCService {
+  // Version はBCDice IRCおよび関連プログラムのバージョン情報を返す。
+  rpc Version(VersionRequest) returns (VersionResponse);
+  // Stop はサービスを停止する。
+  rpc Stop(StopRequet) returns (StopResponse);
+}
+
+message VersionRequest {}
+
+// VersionResponse はBCDice IRCおよび関連プログラムのバージョン情報を返す。
+message VersionResponse {
+  // bcdice はBCDiceのバージョンを示す。
+  string bcdice = 1;
+  // bcdice_irc はBCDice IRCのバージョンを示す。
+  string bcdice_irc = 2;
+}
+
+message StopRequest {}
+
+message StopResponse {}
