@@ -6,7 +6,7 @@ service BCDiceIRCService {
   // Version はBCDice IRCおよび関連プログラムのバージョン情報を返す。
   rpc Version(VersionRequest) returns (VersionResponse);
   // Stop はサービスを停止する。
-  rpc Stop(StopRequet) returns (StopResponse);
+  rpc Stop(StopRequest) returns (StopResponse);
 }
 
 message VersionRequest {}
